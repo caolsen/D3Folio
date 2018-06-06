@@ -15,5 +15,7 @@ struct Profile: Codable {
   let paragonLevelSeason: Int
   let paragonLevelSeasonHardcore: Int
   let guildName: String
+
+  let heroes: [Hero]
 }
 

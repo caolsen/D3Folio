@@ -18,22 +18,24 @@ class ProfileViewModel {
   init() {
     // TODO: dependency injection
     service = Service()
-    api = ProfileApi(route: .profile(account: "AgileGull-1805"), environment: .production)
+    api = ProfileApi(route: .profile(account: "Lyngbakyr-1153"), environment: .production)
   }
 
-  func getProfile() {
+  func getProfile(completion: @escaping() -> Void) {
     service.request(api) { [weak self] (data, response, error) in
       guard let data = data else {
-        // handle error
+        print("data is nil")
         return
       }
 
       do {
         let profile: Profile = try JSONParser.parse(data: data)
         self?.profile = profile
-        print(profile)
+        DispatchQueue.main.async {
+          completion()
+        }
       } catch {
-        // handle error
+        print(error.localizedDescription)
       }
     }
   }

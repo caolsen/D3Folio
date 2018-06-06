@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A884E20C72A1C0055E379 /* AppDelegate.swift */; };
-		671A885120C72A1C0055E379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A885020C72A1C0055E379 /* ViewController.swift */; };
-		671A885420C72A1C0055E379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A885220C72A1C0055E379 /* Main.storyboard */; };
 		671A885620C72A1D0055E379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671A885520C72A1D0055E379 /* Assets.xcassets */; };
 		671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A885720C72A1D0055E379 /* LaunchScreen.storyboard */; };
 		671A886420C72A1D0055E379 /* D3FolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A886320C72A1D0055E379 /* D3FolioTests.swift */; };
@@ -28,6 +26,13 @@
 		671A889420C72D9E0055E379 /* ProfileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889320C72D9E0055E379 /* ProfileApi.swift */; };
 		671A889620C731DF0055E379 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889520C731DF0055E379 /* Profile.swift */; };
 		671A889820C732BD0055E379 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889720C732BD0055E379 /* ProfileViewModel.swift */; };
+		671A889A20C860060055E379 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889920C860060055E379 /* ProfileViewController.swift */; };
+		671A889C20C860220055E379 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A889B20C860220055E379 /* ProfileStoryboard.storyboard */; };
+		671A889E20C861130055E379 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889D20C861130055E379 /* Hero.swift */; };
+		671A88A120C865A80055E379 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A020C865A80055E379 /* HeroTableViewCell.swift */; };
+		671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A88A220C865B60055E379 /* HeroTableViewCell.xib */; };
+		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
+		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.release.xcconfig"; sourceTree = "<group>"; };
+		21630B8EE87294FA59C3BAF9 /* Pods-D3Folio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio/Pods-D3Folio.debug.xcconfig"; sourceTree = "<group>"; };
+		4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio/Pods-D3Folio.release.xcconfig"; sourceTree = "<group>"; };
+		57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio_Tests_D3FolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		671A884B20C72A1C0055E379 /* D3Folio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D3Folio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671A884E20C72A1C0055E379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		671A885020C72A1C0055E379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		671A885320C72A1C0055E379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		671A885520C72A1D0055E379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671A885820C72A1D0055E379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671A885A20C72A1D0055E379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +73,13 @@
 		671A889320C72D9E0055E379 /* ProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApi.swift; sourceTree = "<group>"; };
 		671A889520C731DF0055E379 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		671A889720C732BD0055E379 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		671A889920C860060055E379 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		671A889B20C860220055E379 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		671A889D20C861130055E379 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		671A88A020C865A80055E379 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		671A88A220C865B60055E379 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +108,8 @@
 				671A884D20C72A1C0055E379 /* D3Folio */,
 				671A886220C72A1D0055E379 /* D3FolioTests */,
 				671A884C20C72A1C0055E379 /* Products */,
+				7096E87988D2CC56445A7C55 /* Pods */,
+				77E9A3DE750FF9125603CD4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,8 +128,6 @@
 				671A889020C72D120055E379 /* Profile */,
 				671A886E20C72AAC0055E379 /* Networking */,
 				671A884E20C72A1C0055E379 /* AppDelegate.swift */,
-				671A885020C72A1C0055E379 /* ViewController.swift */,
-				671A885220C72A1C0055E379 /* Main.storyboard */,
 				671A885520C72A1D0055E379 /* Assets.xcassets */,
 				671A885720C72A1D0055E379 /* LaunchScreen.storyboard */,
 				671A885A20C72A1D0055E379 /* Info.plist */,
@@ -166,11 +182,44 @@
 		671A889020C72D120055E379 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				671A889F20C865910055E379 /* Views */,
 				671A889520C731DF0055E379 /* Profile.swift */,
 				671A889320C72D9E0055E379 /* ProfileApi.swift */,
 				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
+				671A889920C860060055E379 /* ProfileViewController.swift */,
+				671A889B20C860220055E379 /* ProfileStoryboard.storyboard */,
+				671A889D20C861130055E379 /* Hero.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		671A889F20C865910055E379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				671A88A020C865A80055E379 /* HeroTableViewCell.swift */,
+				671A88A220C865B60055E379 /* HeroTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7096E87988D2CC56445A7C55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21630B8EE87294FA59C3BAF9 /* Pods-D3Folio.debug.xcconfig */,
+				4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */,
+				95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */,
+				0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77E9A3DE750FF9125603CD4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */,
+				57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 671A886820C72A1D0055E379 /* Build configuration list for PBXNativeTarget "D3Folio" */;
 			buildPhases = (
+				E856299E5713C5229727D374 /* [CP] Check Pods Manifest.lock */,
 				671A884720C72A1C0055E379 /* Sources */,
 				671A884820C72A1C0055E379 /* Frameworks */,
 				671A884920C72A1C0055E379 /* Resources */,
@@ -197,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 671A886B20C72A1D0055E379 /* Build configuration list for PBXNativeTarget "D3FolioTests" */;
 			buildPhases = (
+				42D99E87F9A102B4E6DB6605 /* [CP] Check Pods Manifest.lock */,
 				671A885B20C72A1D0055E379 /* Sources */,
 				671A885C20C72A1D0055E379 /* Frameworks */,
 				671A885D20C72A1D0055E379 /* Resources */,
+				D2B60AE82329766401039ABA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,8 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */,
+				671A889C20C860220055E379 /* ProfileStoryboard.storyboard in Resources */,
 				671A885620C72A1D0055E379 /* Assets.xcassets in Resources */,
-				671A885420C72A1C0055E379 /* Main.storyboard in Resources */,
+				671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +322,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42D99E87F9A102B4E6DB6605 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-D3Folio-Tests-D3FolioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B60AE82329766401039ABA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E856299E5713C5229727D374 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-D3Folio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		671A884720C72A1C0055E379 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,12 +391,14 @@
 				671A888220C72AAC0055E379 /* JSONParameterEncoder.swift in Sources */,
 				671A887E20C72AAC0055E379 /* HTTPTask.swift in Sources */,
 				671A888320C72AAC0055E379 /* JSONParser.swift in Sources */,
-				671A885120C72A1C0055E379 /* ViewController.swift in Sources */,
+				671A889A20C860060055E379 /* ProfileViewController.swift in Sources */,
 				671A888720C72AAC0055E379 /* Parser.swift in Sources */,
 				671A887D20C72AAC0055E379 /* NetworkEnvironment.swift in Sources */,
 				671A887F20C72AAC0055E379 /* HTTPMethod.swift in Sources */,
 				671A888520C72AAC0055E379 /* ParameterEncoder.swift in Sources */,
+				671A88A120C865A80055E379 /* HeroTableViewCell.swift in Sources */,
 				671A888120C72AAC0055E379 /* URLParameterEncoder.swift in Sources */,
+				671A889E20C861130055E379 /* Hero.swift in Sources */,
 				671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */,
 				671A889820C732BD0055E379 /* ProfileViewModel.swift in Sources */,
 				671A888020C72AAC0055E379 /* Service.swift in Sources */,
@@ -313,14 +427,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		671A885220C72A1C0055E379 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				671A885320C72A1C0055E379 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		671A885720C72A1D0055E379 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -448,6 +554,7 @@
 		};
 		671A886920C72A1D0055E379 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21630B8EE87294FA59C3BAF9 /* Pods-D3Folio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +573,7 @@
 		};
 		671A886A20C72A1D0055E379 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +592,7 @@
 		};
 		671A886C20C72A1D0055E379 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +614,7 @@
 		};
 		671A886D20C72A1D0055E379 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
