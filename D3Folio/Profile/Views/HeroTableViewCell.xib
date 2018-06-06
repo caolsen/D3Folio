@@ -6,36 +6,55 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ugn-uV-DOm" customClass="HeroTableViewCell" customModule="D3Folio" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HeroCell" id="Ugn-uV-DOm" customClass="HeroTableViewCell" customModule="D3Folio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ugn-uV-DOm" id="98S-mz-4XF">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APk-yD-pxF">
-                        <rect key="frame" x="24" y="12" width="327" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APk-yD-pxF">
+                        <rect key="frame" x="72" y="20" width="86.5" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fuG-yJ-gIZ">
+                        <rect key="frame" x="16" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="dgg-Qc-8DC"/>
+                            <constraint firstAttribute="width" constant="40" id="qyD-wl-wJx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tea-sp-aEY">
+                        <rect key="frame" x="312.5" y="20" width="20.5" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="APk-yD-pxF" firstAttribute="centerY" secondItem="98S-mz-4XF" secondAttribute="centerY" id="2nO-fC-hBE"/>
-                    <constraint firstItem="APk-yD-pxF" firstAttribute="leading" secondItem="98S-mz-4XF" secondAttribute="leadingMargin" constant="8" id="VcJ-HT-8aj"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="APk-yD-pxF" secondAttribute="trailing" constant="8" id="dVd-tg-L39"/>
+                    <constraint firstItem="tea-sp-aEY" firstAttribute="centerY" secondItem="98S-mz-4XF" secondAttribute="centerY" id="5f1-3R-F3z"/>
+                    <constraint firstItem="APk-yD-pxF" firstAttribute="leading" secondItem="fuG-yJ-gIZ" secondAttribute="trailing" constant="16" id="TEC-Dn-ZSb"/>
+                    <constraint firstItem="tea-sp-aEY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="APk-yD-pxF" secondAttribute="trailing" constant="8" id="WIG-JO-eXj"/>
+                    <constraint firstAttribute="trailing" secondItem="tea-sp-aEY" secondAttribute="trailing" constant="8" id="XEL-SK-JVQ"/>
+                    <constraint firstItem="fuG-yJ-gIZ" firstAttribute="centerY" secondItem="98S-mz-4XF" secondAttribute="centerY" id="btM-Ar-eEX"/>
+                    <constraint firstItem="fuG-yJ-gIZ" firstAttribute="leading" secondItem="98S-mz-4XF" secondAttribute="leading" constant="16" id="mQO-Y0-fLp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="levelLabel" destination="tea-sp-aEY" id="kP6-1d-xVG"/>
                 <outlet property="nameLabel" destination="APk-yD-pxF" id="f9j-YM-suu"/>
+                <outlet property="portraitImageView" destination="fuG-yJ-gIZ" id="mEz-H8-BqG"/>
             </connections>
-            <point key="canvasLocation" x="-86" y="18"/>
+            <point key="canvasLocation" x="-86.5" y="18"/>
         </tableViewCell>
     </objects>
 </document>

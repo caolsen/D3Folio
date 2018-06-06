@@ -10,11 +10,20 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+  // MARK: IBOutlets
+
   @IBOutlet weak var tableView: UITableView!
 
+  // MARK: Private Properties
+
   private let heroCellReuseIdentifier = "HeroCell"
-  
+  private var selectedHero: Hero?
+
+  // MARK: Instance Properties
+
   var viewModel: ProfileViewModel!
+
+  // MARK: iOS Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,13 +35,26 @@ class ProfileViewController: UIViewController {
     getData()
   }
 
+  // MARK: Private Functions
+
   private func getData() {
     viewModel.getProfile { (error) in
       self.tableView.reloadData()
     }
   }
+
+  // MARK: Navigation
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowHero" {
+      guard let dc = segue.destination as? HeroViewController else { return }
+      dc.battleTag = viewModel.profile?.battleTag
+      dc.hero = selectedHero
+    }
+  }
 }
 
+// MARK: - UITableViewDelegate and DataSource
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 
   private func registerTableViewCells() {
@@ -63,6 +85,12 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 44.0
+    return 60.0
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    selectedHero = viewModel.profile?.heroes?[indexPath.row]
+    performSegue(withIdentifier: "ShowHero", sender: self)
+    tableView.deselectRow(at: indexPath, animated: false)
   }
 }
