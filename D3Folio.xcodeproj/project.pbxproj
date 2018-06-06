@@ -10,7 +10,6 @@
 		671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A884E20C72A1C0055E379 /* AppDelegate.swift */; };
 		671A885620C72A1D0055E379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671A885520C72A1D0055E379 /* Assets.xcassets */; };
 		671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A885720C72A1D0055E379 /* LaunchScreen.storyboard */; };
-		671A886420C72A1D0055E379 /* D3FolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A886320C72A1D0055E379 /* D3FolioTests.swift */; };
 		671A887D20C72AAC0055E379 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A886F20C72AAC0055E379 /* NetworkEnvironment.swift */; };
 		671A887E20C72AAC0055E379 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A887020C72AAC0055E379 /* HTTPTask.swift */; };
 		671A887F20C72AAC0055E379 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A887120C72AAC0055E379 /* HTTPMethod.swift */; };
@@ -31,6 +30,9 @@
 		671A889E20C861130055E379 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889D20C861130055E379 /* Hero.swift */; };
 		671A88A120C865A80055E379 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A020C865A80055E379 /* HeroTableViewCell.swift */; };
 		671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A88A220C865B60055E379 /* HeroTableViewCell.xib */; };
+		671A88A620C86ECF0055E379 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A520C86ECF0055E379 /* ProfileViewModel.swift */; };
+		671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A920C870460055E379 /* ProfileServiceMock.swift */; };
+		671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AB20C871160055E379 /* ProfileEndpointMock.swift */; };
 		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
 		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +58,6 @@
 		671A885820C72A1D0055E379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671A885A20C72A1D0055E379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		671A885F20C72A1D0055E379 /* D3FolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D3FolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		671A886320C72A1D0055E379 /* D3FolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D3FolioTests.swift; sourceTree = "<group>"; };
 		671A886520C72A1D0055E379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		671A886F20C72AAC0055E379 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		671A887020C72AAC0055E379 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
@@ -78,6 +79,9 @@
 		671A889D20C861130055E379 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		671A88A020C865A80055E379 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		671A88A220C865B60055E379 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		671A88A520C86ECF0055E379 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		671A88A920C870460055E379 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
+		671A88AB20C871160055E379 /* ProfileEndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndpointMock.swift; sourceTree = "<group>"; };
 		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,7 +142,7 @@
 		671A886220C72A1D0055E379 /* D3FolioTests */ = {
 			isa = PBXGroup;
 			children = (
-				671A886320C72A1D0055E379 /* D3FolioTests.swift */,
+				671A88A720C86EDC0055E379 /* Profile */,
 				671A886520C72A1D0055E379 /* Info.plist */,
 			);
 			path = D3FolioTests;
@@ -182,13 +186,12 @@
 		671A889020C72D120055E379 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				671A88A420C86CAC0055E379 /* Models */,
 				671A889F20C865910055E379 /* Views */,
-				671A889520C731DF0055E379 /* Profile.swift */,
 				671A889320C72D9E0055E379 /* ProfileApi.swift */,
 				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
 				671A889920C860060055E379 /* ProfileViewController.swift */,
 				671A889B20C860220055E379 /* ProfileStoryboard.storyboard */,
-				671A889D20C861130055E379 /* Hero.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -200,6 +203,33 @@
 				671A88A220C865B60055E379 /* HeroTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		671A88A420C86CAC0055E379 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				671A889D20C861130055E379 /* Hero.swift */,
+				671A889520C731DF0055E379 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		671A88A720C86EDC0055E379 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				671A88A820C870390055E379 /* Mocks */,
+				671A88A520C86ECF0055E379 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		671A88A820C870390055E379 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				671A88A920C870460055E379 /* ProfileServiceMock.swift */,
+				671A88AB20C871160055E379 /* ProfileEndpointMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		7096E87988D2CC56445A7C55 /* Pods */ = {
@@ -412,7 +442,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671A886420C72A1D0055E379 /* D3FolioTests.swift in Sources */,
+				671A88A620C86ECF0055E379 /* ProfileViewModel.swift in Sources */,
+				671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */,
+				671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

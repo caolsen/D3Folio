@@ -11,19 +11,19 @@ import Foundation
 class ProfileViewModel {
 
   private let service: NetworkService
-  private let api: ProfileApi
+  private let api: Endpoint
 
   var profile: Profile?
 
-  init() {
-    // TODO: dependency injection
-    service = Service()
-    api = ProfileApi(route: .profile(account: "Lyngbakyr-1153"), environment: .production)
+  init(service: NetworkService = Service(), api: Endpoint) {
+    self.service = service
+    self.api = api
   }
 
-  func getProfile(completion: @escaping() -> Void) {
+  func getProfile(completion: @escaping(Error?) -> Void) {
     service.request(api) { [weak self] (data, response, error) in
       guard let data = data else {
+        completion(NetworkError.missingData)
         print("data is nil")
         return
       }
@@ -32,9 +32,10 @@ class ProfileViewModel {
         let profile: Profile = try JSONParser.parse(data: data)
         self?.profile = profile
         DispatchQueue.main.async {
-          completion()
+          completion(nil)
         }
       } catch {
+        completion(error)
         print(error.localizedDescription)
       }
     }

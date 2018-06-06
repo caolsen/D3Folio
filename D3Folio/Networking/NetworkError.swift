@@ -13,5 +13,6 @@ enum NetworkError: Error {
     case encodingFailed
     case decodingFailed
     case missingURL
+    case missingData
 }
 

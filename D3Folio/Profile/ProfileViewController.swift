@@ -21,8 +21,13 @@ class ProfileViewController: UIViewController {
 
     registerTableViewCells()
 
-    viewModel = ProfileViewModel()
-    viewModel.getProfile {
+    let api = ProfileApi(route: .profile(account: "Lyngbakyr-1153"), environment: .production)
+    viewModel = ProfileViewModel(api: api)
+    getData()
+  }
+
+  private func getData() {
+    viewModel.getProfile { (error) in
       self.tableView.reloadData()
     }
   }
@@ -36,7 +41,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    guard let numberOfRows = viewModel.profile?.heroes.count else {
+    guard let numberOfRows = viewModel.profile?.heroes?.count else {
       return 0
     }
 
@@ -49,7 +54,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
       return UITableViewCell()
     }
 
-    guard let hero = viewModel.profile?.heroes[indexPath.row] else {
+    guard let hero = viewModel.profile?.heroes?[indexPath.row] else {
       return UITableViewCell()
     }
 

@@ -10,12 +10,6 @@ import Foundation
 
 struct Profile: Codable {
   let battleTag: String
-  let paragonLevel: Int
-  let paragonLevelHardcore: Int
-  let paragonLevelSeason: Int
-  let paragonLevelSeasonHardcore: Int
-  let guildName: String
-
-  let heroes: [Hero]
+  let heroes: [Hero]?
 }
 
