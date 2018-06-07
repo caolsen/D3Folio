@@ -26,15 +26,16 @@
 		671A889620C731DF0055E379 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889520C731DF0055E379 /* Profile.swift */; };
 		671A889820C732BD0055E379 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889720C732BD0055E379 /* ProfileViewModel.swift */; };
 		671A889A20C860060055E379 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889920C860060055E379 /* ProfileViewController.swift */; };
-		671A889C20C860220055E379 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A889B20C860220055E379 /* ProfileStoryboard.storyboard */; };
+		671A889C20C860220055E379 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A889B20C860220055E379 /* Profile.storyboard */; };
 		671A889E20C861130055E379 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A889D20C861130055E379 /* Hero.swift */; };
 		671A88A120C865A80055E379 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A020C865A80055E379 /* HeroTableViewCell.swift */; };
 		671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A88A220C865B60055E379 /* HeroTableViewCell.xib */; };
-		671A88A620C86ECF0055E379 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A520C86ECF0055E379 /* ProfileViewModel.swift */; };
+		671A88A620C86ECF0055E379 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */; };
 		671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A920C870460055E379 /* ProfileServiceMock.swift */; };
 		671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AB20C871160055E379 /* ProfileEndpointMock.swift */; };
 		671A88AF20C888560055E379 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AE20C888560055E379 /* HeroViewController.swift */; };
-		671A88B120C888860055E379 /* HeroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A88B020C888860055E379 /* HeroStoryboard.storyboard */; };
+		671A88B120C888860055E379 /* Hero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A88B020C888860055E379 /* Hero.storyboard */; };
+		671A88B420C9ABA30055E379 /* ProfilePerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88B320C9ABA30055E379 /* ProfilePerformanceTests.swift */; };
 		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
 		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,15 +78,16 @@
 		671A889520C731DF0055E379 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		671A889720C732BD0055E379 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		671A889920C860060055E379 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		671A889B20C860220055E379 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		671A889B20C860220055E379 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		671A889D20C861130055E379 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		671A88A020C865A80055E379 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		671A88A220C865B60055E379 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
-		671A88A520C86ECF0055E379 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		671A88A920C870460055E379 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
 		671A88AB20C871160055E379 /* ProfileEndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndpointMock.swift; sourceTree = "<group>"; };
 		671A88AE20C888560055E379 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
-		671A88B020C888860055E379 /* HeroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroStoryboard.storyboard; sourceTree = "<group>"; };
+		671A88B020C888860055E379 /* Hero.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hero.storyboard; sourceTree = "<group>"; };
+		671A88B320C9ABA30055E379 /* ProfilePerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePerformanceTests.swift; sourceTree = "<group>"; };
 		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,8 +197,8 @@
 				671A889F20C865910055E379 /* Views */,
 				671A889320C72D9E0055E379 /* ProfileApi.swift */,
 				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
-				671A889B20C860220055E379 /* ProfileStoryboard.storyboard */,
-				671A88B020C888860055E379 /* HeroStoryboard.storyboard */,
+				671A889B20C860220055E379 /* Profile.storyboard */,
+				671A88B020C888860055E379 /* Hero.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -223,7 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				671A88A820C870390055E379 /* Mocks */,
-				671A88A520C86ECF0055E379 /* ProfileViewModel.swift */,
+				671A88B220C9AAEA0055E379 /* Performance */,
+				671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -244,6 +247,14 @@
 				671A889920C860060055E379 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		671A88B220C9AAEA0055E379 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				671A88B320C9ABA30055E379 /* ProfilePerformanceTests.swift */,
+			);
+			path = Performance;
 			sourceTree = "<group>";
 		};
 		7096E87988D2CC56445A7C55 /* Pods */ = {
@@ -350,9 +361,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671A88B120C888860055E379 /* HeroStoryboard.storyboard in Resources */,
+				671A88B120C888860055E379 /* Hero.storyboard in Resources */,
 				671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */,
-				671A889C20C860220055E379 /* ProfileStoryboard.storyboard in Resources */,
+				671A889C20C860220055E379 /* Profile.storyboard in Resources */,
 				671A885620C72A1D0055E379 /* Assets.xcassets in Resources */,
 				671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */,
 			);
@@ -458,8 +469,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671A88A620C86ECF0055E379 /* ProfileViewModel.swift in Sources */,
+				671A88A620C86ECF0055E379 /* ProfileViewModelTests.swift in Sources */,
 				671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */,
+				671A88B420C9ABA30055E379 /* ProfilePerformanceTests.swift in Sources */,
 				671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

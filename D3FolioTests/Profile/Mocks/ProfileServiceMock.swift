@@ -24,7 +24,7 @@ class ProfileServiceMock: NetworkService {
     case .good:
       data = ("{\"battleTag\":\"player\"}").data(using: .utf8)
     case .bad:
-      data = ("{\"battleTag\":\"player\", \"junkData\":\"junk\"}").data(using: .utf8)
+      data = ("{\"junkData\":\"junk\"}").data(using: .utf8)
     case .empty:
       data = nil
     }

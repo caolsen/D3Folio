@@ -31,10 +31,10 @@ class ProfileViewModelTests: QuickSpec {
         }
       }
 
-      it("can handle extra properties") {
+      it("requires a battleTag in the response data") {
         let viewModel = ProfileViewModel(service: ProfileServiceMock(.bad), api: ProfileEndpointMock())
         viewModel.getProfile { (error) in
-          expect(viewModel.profile).toNot(beNil())
+          expect(error).to(beAKindOf(NetworkError.self))
         }
       }
     }

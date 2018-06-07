@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController {
 
   // MARK: Private Functions
 
-  private func getData() {
+  func getData() {
     viewModel.getProfile { (error) in
       self.tableView.reloadData()
     }
