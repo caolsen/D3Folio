@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DA0E872A6A3379632B09EA7 /* Pods_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BAA8A7469BFF9D5F0926F /* Pods_D3FolioTests.framework */; };
 		671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A884E20C72A1C0055E379 /* AppDelegate.swift */; };
 		671A885620C72A1D0055E379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671A885520C72A1D0055E379 /* Assets.xcassets */; };
 		671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A885720C72A1D0055E379 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,10 @@
 		671A88AF20C888560055E379 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AE20C888560055E379 /* HeroViewController.swift */; };
 		671A88B120C888860055E379 /* Hero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A88B020C888860055E379 /* Hero.storyboard */; };
 		671A88B420C9ABA30055E379 /* ProfilePerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88B320C9ABA30055E379 /* ProfilePerformanceTests.swift */; };
+		671A88B620C9B9890055E379 /* GetStarted.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A88B520C9B9890055E379 /* GetStarted.storyboard */; };
+		671A88B820C9BA9B0055E379 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88B720C9BA9B0055E379 /* Authorization.swift */; };
+		671A88BA20C9BB0B0055E379 /* BattleNetAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */; };
+		671A88BC20C9BC0E0055E379 /* BattleNet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 671A88BB20C9BC0E0055E379 /* BattleNet.plist */; };
 		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
 		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +57,9 @@
 
 /* Begin PBXFileReference section */
 		0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.release.xcconfig"; sourceTree = "<group>"; };
+		169F4E571CAAB7EC2898B49D /* Pods-D3FolioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3FolioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3FolioTests/Pods-D3FolioTests.release.xcconfig"; sourceTree = "<group>"; };
 		21630B8EE87294FA59C3BAF9 /* Pods-D3Folio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio/Pods-D3Folio.debug.xcconfig"; sourceTree = "<group>"; };
+		3E8BAA8A7469BFF9D5F0926F /* Pods_D3FolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3FolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio/Pods-D3Folio.release.xcconfig"; sourceTree = "<group>"; };
 		57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio_Tests_D3FolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		671A884B20C72A1C0055E379 /* D3Folio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D3Folio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +95,11 @@
 		671A88AE20C888560055E379 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		671A88B020C888860055E379 /* Hero.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hero.storyboard; sourceTree = "<group>"; };
 		671A88B320C9ABA30055E379 /* ProfilePerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePerformanceTests.swift; sourceTree = "<group>"; };
+		671A88B520C9B9890055E379 /* GetStarted.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStarted.storyboard; sourceTree = "<group>"; };
+		671A88B720C9BA9B0055E379 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNetAuthorization.swift; sourceTree = "<group>"; };
+		671A88BB20C9BC0E0055E379 /* BattleNet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BattleNet.plist; sourceTree = "<group>"; };
+		740D845294A12325886F240E /* Pods-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3FolioTests/Pods-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */,
+				3DA0E872A6A3379632B09EA7 /* Pods_D3FolioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +148,8 @@
 		671A884D20C72A1C0055E379 /* D3Folio */ = {
 			isa = PBXGroup;
 			children = (
+				671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */,
+				671A88BB20C9BC0E0055E379 /* BattleNet.plist */,
 				671A889020C72D120055E379 /* Profile */,
 				671A886E20C72AAC0055E379 /* Networking */,
 				671A884E20C72A1C0055E379 /* AppDelegate.swift */,
@@ -181,6 +196,7 @@
 		671A887820C72AAC0055E379 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				671A88B720C9BA9B0055E379 /* Authorization.swift */,
 				671A887C20C72AAC0055E379 /* Endpoint.swift */,
 				671A887A20C72AAC0055E379 /* NetworkService.swift */,
 				671A887920C72AAC0055E379 /* ParameterEncoder.swift */,
@@ -197,8 +213,9 @@
 				671A889F20C865910055E379 /* Views */,
 				671A889320C72D9E0055E379 /* ProfileApi.swift */,
 				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
-				671A889B20C860220055E379 /* Profile.storyboard */,
+				671A88B520C9B9890055E379 /* GetStarted.storyboard */,
 				671A88B020C888860055E379 /* Hero.storyboard */,
+				671A889B20C860220055E379 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -264,6 +281,8 @@
 				4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */,
 				95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */,
 				0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */,
+				740D845294A12325886F240E /* Pods-D3FolioTests.debug.xcconfig */,
+				169F4E571CAAB7EC2898B49D /* Pods-D3FolioTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -273,6 +292,7 @@
 			children = (
 				C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */,
 				57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */,
+				3E8BAA8A7469BFF9D5F0926F /* Pods_D3FolioTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,9 +383,11 @@
 			files = (
 				671A88B120C888860055E379 /* Hero.storyboard in Resources */,
 				671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */,
+				671A88BC20C9BC0E0055E379 /* BattleNet.plist in Resources */,
 				671A889C20C860220055E379 /* Profile.storyboard in Resources */,
 				671A885620C72A1D0055E379 /* Assets.xcassets in Resources */,
 				671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */,
+				671A88B620C9B9890055E379 /* GetStarted.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,8 +476,10 @@
 				671A887F20C72AAC0055E379 /* HTTPMethod.swift in Sources */,
 				671A888520C72AAC0055E379 /* ParameterEncoder.swift in Sources */,
 				671A88A120C865A80055E379 /* HeroTableViewCell.swift in Sources */,
+				671A88B820C9BA9B0055E379 /* Authorization.swift in Sources */,
 				671A888120C72AAC0055E379 /* URLParameterEncoder.swift in Sources */,
 				671A889E20C861130055E379 /* Hero.swift in Sources */,
+				671A88BA20C9BB0B0055E379 /* BattleNetAuthorization.swift in Sources */,
 				671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */,
 				671A889820C732BD0055E379 /* ProfileViewModel.swift in Sources */,
 				671A888020C72AAC0055E379 /* Service.swift in Sources */,

@@ -17,12 +17,12 @@ struct ProfileApi {
   let environment: NetworkEnvironment
   let apiKey: String
 
-  init(route: ProfileApiRoute, environment: NetworkEnvironment) {
+  init(authorization: Authorization = BattleNetAuthorization(), route: ProfileApiRoute, environment: NetworkEnvironment) {
     self.route = route
     self.environment = environment
 
     // TODO: get apiKey from plist
-    self.apiKey = "rh6r2nw9kmfx9gq2e9psbkht7uvryqtz"
+    self.apiKey = authorization.apiKey
   }
 }
 

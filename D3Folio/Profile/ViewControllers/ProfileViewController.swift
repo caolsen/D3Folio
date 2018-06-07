@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController {
     getData()
   }
 
-  // MARK: Private Functions
+  // MARK: Instance Functions
 
   func getData() {
     viewModel.getProfile { (error) in
