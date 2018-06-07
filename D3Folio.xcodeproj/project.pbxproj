@@ -148,8 +148,7 @@
 		671A884D20C72A1C0055E379 /* D3Folio */ = {
 			isa = PBXGroup;
 			children = (
-				671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */,
-				671A88BB20C9BC0E0055E379 /* BattleNet.plist */,
+				671A88BE20C9C3B20055E379 /* Authorization */,
 				671A889020C72D120055E379 /* Profile */,
 				671A886E20C72AAC0055E379 /* Networking */,
 				671A884E20C72A1C0055E379 /* AppDelegate.swift */,
@@ -272,6 +271,15 @@
 				671A88B320C9ABA30055E379 /* ProfilePerformanceTests.swift */,
 			);
 			path = Performance;
+			sourceTree = "<group>";
+		};
+		671A88BE20C9C3B20055E379 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */,
+				671A88BB20C9BC0E0055E379 /* BattleNet.plist */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		7096E87988D2CC56445A7C55 /* Pods */ = {
