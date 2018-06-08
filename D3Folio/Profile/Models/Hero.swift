@@ -31,6 +31,7 @@ struct Hero: Codable {
   let level: Int
   let paragonLevel: Int
 
+  /// This is needed because class is a reserved word in swift :\
   private enum CodingKeys: String, CodingKey {
     case id
     case name

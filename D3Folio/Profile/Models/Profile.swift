@@ -11,5 +11,7 @@ import Foundation
 struct Profile: Codable {
   let battleTag: String
   let heroes: [Hero]?
+  let lastUpdated: Double?
+  let kills: DefeatedEnemies?
 }
 

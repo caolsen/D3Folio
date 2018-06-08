@@ -13,10 +13,13 @@ class ProfileViewController: UIViewController {
   // MARK: IBOutlets
 
   @IBOutlet weak var tableView: UITableView!
-
+  @IBOutlet weak var enemyCountStackView: UIStackView!
+  @IBOutlet weak var lastUpdatedLabel: UILabel!
+  
   // MARK: Private Properties
 
   private let heroCellReuseIdentifier = "HeroCell"
+  private let enemyCountCellReuseIdentifier = "EnemyCountCell"
   private var selectedHero: Hero?
 
   // MARK: Instance Properties
@@ -40,7 +43,26 @@ class ProfileViewController: UIViewController {
   func getData() {
     viewModel.getProfile { (error) in
       self.tableView.reloadData()
+      self.updateProfileView()
+      self.setupEnemyCountStackView()
     }
+  }
+
+  private func setupEnemyCountStackView() {
+    for monsters in viewModel.defeatedEnemies {
+
+      let nib = UINib(nibName: "EnemyCountView", bundle: nil)
+      if let view = nib.instantiate(withOwner: self, options: nil).first as? EnemyCountView {
+        view.setup(enemyCount: monsters.count, enemyType: monsters.title)
+        enemyCountStackView.addArrangedSubview(view)
+      }
+
+    }
+  }
+
+  private func updateProfileView() {
+    navigationItem.title = viewModel.profile?.battleTag
+    lastUpdatedLabel.text = viewModel.lastUpdated
   }
 
   // MARK: Navigation
@@ -58,7 +80,8 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 
   private func registerTableViewCells() {
-    tableView.register(UINib(nibName: "HeroTableViewCell", bundle: nil), forCellReuseIdentifier: heroCellReuseIdentifier)
+    let nib  = UINib(nibName: "HeroTableViewCell", bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: heroCellReuseIdentifier)
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,3 +117,4 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     tableView.deselectRow(at: indexPath, animated: false)
   }
 }
+

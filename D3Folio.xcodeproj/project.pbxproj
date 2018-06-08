@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DA0E872A6A3379632B09EA7 /* Pods_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8BAA8A7469BFF9D5F0926F /* Pods_D3FolioTests.framework */; };
 		671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A884E20C72A1C0055E379 /* AppDelegate.swift */; };
 		671A885620C72A1D0055E379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671A885520C72A1D0055E379 /* Assets.xcassets */; };
 		671A885920C72A1D0055E379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A885720C72A1D0055E379 /* LaunchScreen.storyboard */; };
@@ -41,6 +40,9 @@
 		671A88B820C9BA9B0055E379 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88B720C9BA9B0055E379 /* Authorization.swift */; };
 		671A88BA20C9BB0B0055E379 /* BattleNetAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */; };
 		671A88BC20C9BC0E0055E379 /* BattleNet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 671A88BB20C9BC0E0055E379 /* BattleNet.plist */; };
+		671A88C020C9DCCF0055E379 /* DefeatedEnemies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88BF20C9DCCF0055E379 /* DefeatedEnemies.swift */; };
+		671A88CA20CB1BEC0055E379 /* EnemyCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A88C920CB1BEC0055E379 /* EnemyCountView.xib */; };
+		671A88CC20CB1BFB0055E379 /* EnemyCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88CB20CB1BFB0055E379 /* EnemyCountView.swift */; };
 		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
 		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,9 +59,7 @@
 
 /* Begin PBXFileReference section */
 		0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.release.xcconfig"; sourceTree = "<group>"; };
-		169F4E571CAAB7EC2898B49D /* Pods-D3FolioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3FolioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3FolioTests/Pods-D3FolioTests.release.xcconfig"; sourceTree = "<group>"; };
 		21630B8EE87294FA59C3BAF9 /* Pods-D3Folio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio/Pods-D3Folio.debug.xcconfig"; sourceTree = "<group>"; };
-		3E8BAA8A7469BFF9D5F0926F /* Pods_D3FolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3FolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio.release.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio/Pods-D3Folio.release.xcconfig"; sourceTree = "<group>"; };
 		57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio_Tests_D3FolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		671A884B20C72A1C0055E379 /* D3Folio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D3Folio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,9 @@
 		671A88B720C9BA9B0055E379 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		671A88B920C9BB0B0055E379 /* BattleNetAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNetAuthorization.swift; sourceTree = "<group>"; };
 		671A88BB20C9BC0E0055E379 /* BattleNet.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BattleNet.plist; sourceTree = "<group>"; };
-		740D845294A12325886F240E /* Pods-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3FolioTests/Pods-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		671A88BF20C9DCCF0055E379 /* DefeatedEnemies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefeatedEnemies.swift; sourceTree = "<group>"; };
+		671A88C920CB1BEC0055E379 /* EnemyCountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnemyCountView.xib; sourceTree = "<group>"; };
+		671A88CB20CB1BFB0055E379 /* EnemyCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyCountView.swift; sourceTree = "<group>"; };
 		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */,
-				3DA0E872A6A3379632B09EA7 /* Pods_D3FolioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +225,8 @@
 			children = (
 				671A88A020C865A80055E379 /* HeroTableViewCell.swift */,
 				671A88A220C865B60055E379 /* HeroTableViewCell.xib */,
+				671A88CB20CB1BFB0055E379 /* EnemyCountView.swift */,
+				671A88C920CB1BEC0055E379 /* EnemyCountView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 		671A88A420C86CAC0055E379 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				671A88BF20C9DCCF0055E379 /* DefeatedEnemies.swift */,
 				671A889D20C861130055E379 /* Hero.swift */,
 				671A889520C731DF0055E379 /* Profile.swift */,
 			);
@@ -289,8 +293,6 @@
 				4BEEA2B72CFC3C9A476EA707 /* Pods-D3Folio.release.xcconfig */,
 				95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */,
 				0F46949C0165D3C74BEA0D12 /* Pods-D3Folio-Tests-D3FolioTests.release.xcconfig */,
-				740D845294A12325886F240E /* Pods-D3FolioTests.debug.xcconfig */,
-				169F4E571CAAB7EC2898B49D /* Pods-D3FolioTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -300,7 +302,6 @@
 			children = (
 				C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */,
 				57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */,
-				3E8BAA8A7469BFF9D5F0926F /* Pods_D3FolioTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -396,6 +397,7 @@
 				671A885620C72A1D0055E379 /* Assets.xcassets in Resources */,
 				671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */,
 				671A88B620C9B9890055E379 /* GetStarted.storyboard in Resources */,
+				671A88CA20CB1BEC0055E379 /* EnemyCountView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +480,7 @@
 				671A888220C72AAC0055E379 /* JSONParameterEncoder.swift in Sources */,
 				671A887E20C72AAC0055E379 /* HTTPTask.swift in Sources */,
 				671A888320C72AAC0055E379 /* JSONParser.swift in Sources */,
+				671A88C020C9DCCF0055E379 /* DefeatedEnemies.swift in Sources */,
 				671A889A20C860060055E379 /* ProfileViewController.swift in Sources */,
 				671A888720C72AAC0055E379 /* Parser.swift in Sources */,
 				671A887D20C72AAC0055E379 /* NetworkEnvironment.swift in Sources */,
@@ -490,6 +493,7 @@
 				671A88BA20C9BB0B0055E379 /* BattleNetAuthorization.swift in Sources */,
 				671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */,
 				671A889820C732BD0055E379 /* ProfileViewModel.swift in Sources */,
+				671A88CC20CB1BFB0055E379 /* EnemyCountView.swift in Sources */,
 				671A888020C72AAC0055E379 /* Service.swift in Sources */,
 				671A888620C72AAC0055E379 /* NetworkService.swift in Sources */,
 				671A889620C731DF0055E379 /* Profile.swift in Sources */,
@@ -652,6 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDEYN6H976;
 				INFOPLIST_FILE = D3Folio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,6 +676,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDEYN6H976;
 				INFOPLIST_FILE = D3Folio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
