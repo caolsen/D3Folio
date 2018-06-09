@@ -38,6 +38,11 @@ class ProfileViewController: UIViewController {
     getData()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: false)
+  }
+
   // MARK: Instance Functions
 
   func getData() {
