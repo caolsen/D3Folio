@@ -38,15 +38,20 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-co-pWl">
+                                        <rect key="frame" x="169.5" y="57" width="37" height="37"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="jeh-co-pWl" firstAttribute="centerY" secondItem="Khg-DF-qfc" secondAttribute="centerY" id="0La-Ry-1wW"/>
                                     <constraint firstAttribute="trailing" secondItem="Ah5-yp-Fe6" secondAttribute="trailing" constant="8" id="4gs-Gz-LUM"/>
                                     <constraint firstAttribute="height" constant="150" id="9OS-Or-sQC"/>
                                     <constraint firstAttribute="trailing" secondItem="8hr-Es-w2w" secondAttribute="trailing" constant="8" id="FHS-rt-IJG"/>
                                     <constraint firstItem="8hr-Es-w2w" firstAttribute="leading" secondItem="Khg-DF-qfc" secondAttribute="leading" constant="8" id="Ict-On-TRh"/>
                                     <constraint firstItem="F4o-xG-JWk" firstAttribute="top" secondItem="Khg-DF-qfc" secondAttribute="top" constant="8" id="JBn-1m-Mbp"/>
                                     <constraint firstItem="F4o-xG-JWk" firstAttribute="leading" secondItem="Khg-DF-qfc" secondAttribute="leading" constant="8" id="Kvo-vj-aH8"/>
+                                    <constraint firstItem="jeh-co-pWl" firstAttribute="centerX" secondItem="Khg-DF-qfc" secondAttribute="centerX" id="P0K-lN-k5w"/>
                                     <constraint firstItem="8hr-Es-w2w" firstAttribute="top" secondItem="F4o-xG-JWk" secondAttribute="bottom" constant="8" id="ip4-eM-qUI"/>
                                     <constraint firstAttribute="bottom" secondItem="Ah5-yp-Fe6" secondAttribute="bottom" constant="8" id="qvK-n5-kHW"/>
                                     <constraint firstAttribute="trailing" secondItem="F4o-xG-JWk" secondAttribute="trailing" constant="8" id="zTn-9x-pJJ"/>
@@ -75,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="teT-en-psd"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="jeh-co-pWl" id="N5b-Aw-o3d"/>
                         <outlet property="enemyCountStackView" destination="8hr-Es-w2w" id="21D-sv-HcE"/>
                         <outlet property="lastUpdatedLabel" destination="Ah5-yp-Fe6" id="KGQ-ZR-Fb7"/>
                         <outlet property="tableView" destination="BIL-V1-eWF" id="i5p-f2-Tky"/>

@@ -37,6 +37,15 @@ class ProfileViewModelTests: QuickSpec {
           expect(error).to(beAKindOf(NetworkError.self))
         }
       }
+
+      context("defeated enemies") {
+        it("should contain contain 3 items") {
+          let viewModel = ProfileViewModel(service: ProfileServiceMock(.kills), api: ProfileEndpointMock())
+          viewModel.getProfile { (error) in
+            expect(viewModel.defeatedEnemies.count).to(equal(2))
+          }
+        }
+      }
     }
   }
 }

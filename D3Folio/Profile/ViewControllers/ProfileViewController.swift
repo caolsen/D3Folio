@@ -21,6 +21,9 @@ class ProfileViewController: UIViewController {
   /// Label to show the last time the account data was updated.
   @IBOutlet weak var lastUpdatedLabel: UILabel!
   
+  /// Indicates activity for loading profile info
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
   // MARK: Private Properties
 
   // Reuse Identifiers
@@ -78,6 +81,7 @@ class ProfileViewController: UIViewController {
     viewModel?.getProfile { (error) in
       // TODO: handle error
 
+      self.activityIndicator.stopAnimating()
       self.tableView.reloadData()
       self.updateProfileView()
       self.setupEnemyCountStackView()

@@ -8,8 +8,15 @@
 
 import Foundation
 
+/// Representation of the defeated enemy counts for different enemy types.
 struct DefeatedEnemies: Codable {
+
+  /// Total monsters defeated.
   let monsters: Int?
+
+  /// Elite monsters defeated.
   let elites: Int?
+
+  /// Monsters defeated by Hardcore characters.
   let hardcoreMonsters: Int?
 }

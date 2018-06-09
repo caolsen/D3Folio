@@ -15,6 +15,7 @@ class HeroTableViewCell: UITableViewCell {
   @IBOutlet weak var levelLabel: UILabel!
   
   func setup(with hero: Hero) {
+    portraitImageView.image = hero.portrait
     nameLabel.text = hero.name
     levelLabel.text = String(hero.level)
   }

@@ -44,6 +44,7 @@
 		671A88CC20CB1BFB0055E379 /* EnemyCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88CB20CB1BFB0055E379 /* EnemyCountView.swift */; };
 		6796D97620CB8B5A00EB16C5 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D97520CB8B5A00EB16C5 /* GetStartedViewController.swift */; };
 		6796D97A20CC54F900EB16C5 /* GetStartedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D97920CC54F900EB16C5 /* GetStartedViewControllerTests.swift */; };
+		6796D97D20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D97C20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift */; };
 		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
 		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		671A88CB20CB1BFB0055E379 /* EnemyCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyCountView.swift; sourceTree = "<group>"; };
 		6796D97520CB8B5A00EB16C5 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		6796D97920CC54F900EB16C5 /* GetStartedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewControllerTests.swift; sourceTree = "<group>"; };
+		6796D97C20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
 		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -213,9 +215,9 @@
 				671A88A420C86CAC0055E379 /* Models */,
 				6796D97720CC541300EB16C5 /* Storyboards */,
 				671A88AD20C8882F0055E379 /* ViewControllers */,
+				6796D97E20CC823F00EB16C5 /* ViewModels */,
 				671A889F20C865910055E379 /* Views */,
 				671A889320C72D9E0055E379 /* ProfileApi.swift */,
-				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -244,9 +246,9 @@
 		671A88A720C86EDC0055E379 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				6796D97820CC54BA00EB16C5 /* ViewControllers */,
 				671A88A820C870390055E379 /* Mocks */,
-				671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */,
+				6796D97820CC54BA00EB16C5 /* ViewControllers */,
+				6796D97B20CC7CC500EB16C5 /* ViewModels */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -293,8 +295,25 @@
 			isa = PBXGroup;
 			children = (
 				6796D97920CC54F900EB16C5 /* GetStartedViewControllerTests.swift */,
+				6796D97C20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6796D97B20CC7CC500EB16C5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6796D97E20CC823F00EB16C5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7096E87988D2CC56445A7C55 /* Pods */ = {
@@ -518,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				671A88A620C86ECF0055E379 /* ProfileViewModelTests.swift in Sources */,
+				6796D97D20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift in Sources */,
 				671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */,
 				671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */,
 				6796D97A20CC54F900EB16C5 /* GetStartedViewControllerTests.swift in Sources */,

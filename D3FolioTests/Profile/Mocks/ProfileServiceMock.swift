@@ -13,6 +13,7 @@ enum RequestDataType {
   case good
   case bad
   case empty
+  case kills
 }
 
 class ProfileServiceMock: NetworkService {
@@ -27,6 +28,8 @@ class ProfileServiceMock: NetworkService {
       data = ("{\"junkData\":\"junk\"}").data(using: .utf8)
     case .empty:
       data = nil
+    case .kills:
+      data = ("{ \"battleTag\":\"player\", \"kills\": { \"monsters\": 1, \"elites\": 1, \"hardcoreMonsters\": 1 } }").data(using: .utf8)
     }
   }
 
