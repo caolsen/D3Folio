@@ -40,7 +40,7 @@ class Service: NetworkService {
     
     private func buildRequest(from endpoint: Endpoint) throws -> URLRequest {
         var request = URLRequest(url: endpoint.baseURL.appendingPathComponent(endpoint.path),
-                                 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                 cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0)
         request.httpMethod = endpoint.method.rawValue
         
