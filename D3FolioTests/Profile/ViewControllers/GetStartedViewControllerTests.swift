@@ -44,6 +44,13 @@ class GetStartedViewControllerTests: QuickSpec {
           expect(bool).to(beTrue())
         }
       }
+
+      context("account name text field return key is pressed") {
+        it("should move first respnder to tagId text field") {
+          let _ = getStartedViewController.textFieldShouldReturn(getStartedViewController.accountNameTextField)
+          expect(getStartedViewController.tagIdTextField.isFirstResponder).to(beTrue())
+        }
+      }
     }
   }
 }

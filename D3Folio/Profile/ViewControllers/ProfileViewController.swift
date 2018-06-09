@@ -12,19 +12,36 @@ class ProfileViewController: UIViewController {
 
   // MARK: IBOutlets
 
+  /// TableView for displaying the list of heroes.
   @IBOutlet weak var tableView: UITableView!
+
+  /// This stack view shows up to 3 views representing the count of enemies the player has defeated.
   @IBOutlet weak var enemyCountStackView: UIStackView!
+
+  /// Label to show the last time the account data was updated.
   @IBOutlet weak var lastUpdatedLabel: UILabel!
   
   // MARK: Private Properties
 
+  // Reuse Identifiers
   private let heroCellReuseIdentifier = "HeroCell"
   private let enemyCountCellReuseIdentifier = "EnemyCountCell"
+
+  /// Hero the user selected from the tableView. Used when passing data via the segue to
+  /// the Hero detail view.
   private var selectedHero: Hero?
 
   // MARK: Instance Properties
 
-  var viewModel: ProfileViewModel!
+  /// alphanumeric portion of a battletag
+  var accountName: String?
+
+  /// numeric portion of a battletag
+  var tagId: String?
+
+  /// viewModel for populating all the UI elements. Gets created via the ProfileApi.
+  /// Will be nil if accountName or tagId are nil.
+  var viewModel: ProfileViewModel?
 
   // MARK: iOS Lifecycle
 
@@ -32,9 +49,7 @@ class ProfileViewController: UIViewController {
     super.viewDidLoad()
 
     registerTableViewCells()
-
-    let api = ProfileApi(route: .profile(account: "Lyngbakyr-1153"), environment: .production)
-    viewModel = ProfileViewModel(api: api)
+    setupViewModel()
     getData()
   }
 
@@ -45,29 +60,48 @@ class ProfileViewController: UIViewController {
 
   // MARK: Instance Functions
 
-  func getData() {
-    viewModel.getProfile { (error) in
+  /// Creates the viewModel using the ProfileApi. Will fail if accountName or tagId are nil.
+  private func setupViewModel() {
+    guard let accountName = accountName, let tagId = tagId else {
+      // TODO: pop error
+      return
+    }
+
+    let api = ProfileApi(route: .profile(account: accountName + "-" + tagId), environment: .production)
+    viewModel = ProfileViewModel(api: api)
+  }
+
+  /// Asks the viewModel to fetch profile data from the Battle.net endpoint.
+  /// - Will fail if the viewModel is nil, so should be called after setupViewModel()
+  /// - Reloads tableView and updates other UI elements upon completion
+  private func getData() {
+    viewModel?.getProfile { (error) in
+      // TODO: handle error
+
       self.tableView.reloadData()
       self.updateProfileView()
       self.setupEnemyCountStackView()
     }
   }
 
+  /// Creates arranged subviews for the enemyCountStackView.
   private func setupEnemyCountStackView() {
-    for monsters in viewModel.defeatedEnemies {
+    guard let defeatedEnemies = viewModel?.defeatedEnemies else { return }
+
+    for monsters in defeatedEnemies {
 
       let nib = UINib(nibName: "EnemyCountView", bundle: nil)
       if let view = nib.instantiate(withOwner: self, options: nil).first as? EnemyCountView {
         view.setup(enemyCount: monsters.count, enemyType: monsters.title)
         enemyCountStackView.addArrangedSubview(view)
       }
-
     }
   }
 
+  /// Updates simple UI elements in the "Profile" view shown above the tableView.
   private func updateProfileView() {
-    navigationItem.title = viewModel.profile?.battleTag
-    lastUpdatedLabel.text = viewModel.lastUpdated
+    navigationItem.title = viewModel?.profile?.battleTag
+    lastUpdatedLabel.text = viewModel?.lastUpdated
   }
 
   // MARK: Navigation
@@ -75,7 +109,7 @@ class ProfileViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "ShowHero" {
       guard let dc = segue.destination as? HeroViewController else { return }
-      dc.battleTag = viewModel.profile?.battleTag
+      dc.battleTag = viewModel?.profile?.battleTag
       dc.hero = selectedHero
     }
   }
@@ -91,7 +125,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    guard let numberOfRows = viewModel.profile?.heroes?.count else {
+    guard let numberOfRows = viewModel?.profile?.heroes?.count else {
       return 0
     }
 
@@ -104,7 +138,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
       return UITableViewCell()
     }
 
-    guard let hero = viewModel.profile?.heroes?[indexPath.row] else {
+    guard let hero = viewModel?.profile?.heroes?[indexPath.row] else {
       return UITableViewCell()
     }
 
@@ -117,7 +151,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    selectedHero = viewModel.profile?.heroes?[indexPath.row]
+    selectedHero = viewModel?.profile?.heroes?[indexPath.row]
     performSegue(withIdentifier: "ShowHero", sender: self)
     tableView.deselectRow(at: indexPath, animated: false)
   }
