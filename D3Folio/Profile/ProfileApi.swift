@@ -10,6 +10,7 @@ import Foundation
 
 enum ProfileApiRoute {
   case profile(account: String)
+  case hero(account: String, hero: String)
 }
 
 struct ProfileApi {
@@ -43,6 +44,8 @@ extension ProfileApi: Endpoint {
     switch route {
     case .profile(let account):
       return "\(account)/"
+    case .hero(let account, let hero):
+      return "\(account)/hero/\(hero)/"
     }
   }
 
@@ -52,7 +55,7 @@ extension ProfileApi: Endpoint {
 
   var task: HTTPTask {
     switch route {
-    case .profile(_):
+    case .profile(_), .hero(_, _):
       return .requestParameters(bodyParameters: nil, urlParameters: ["locale": "en_US", "apiKey": apiKey])
     }
   }

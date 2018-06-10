@@ -14,6 +14,7 @@ enum RequestDataType {
   case bad
   case empty
   case kills
+  case date
 }
 
 class ProfileServiceMock: NetworkService {
@@ -30,6 +31,8 @@ class ProfileServiceMock: NetworkService {
       data = nil
     case .kills:
       data = ("{ \"battleTag\":\"player\", \"kills\": { \"monsters\": 1, \"elites\": 1, \"hardcoreMonsters\": 1 } }").data(using: .utf8)
+    case .date:
+      data = ("{ \"battleTag\":\"player\", \"lastUpdated\": 1516721909 }").data(using: .utf8)
     }
   }
 

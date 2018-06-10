@@ -46,6 +46,8 @@
 		6796D97A20CC54F900EB16C5 /* GetStartedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D97920CC54F900EB16C5 /* GetStartedViewControllerTests.swift */; };
 		6796D97D20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D97C20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift */; };
 		6796D98320CC8D6700EB16C5 /* URLParameterEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D98220CC8D6700EB16C5 /* URLParameterEncoderTests.swift */; };
+		6796D98520CC960D00EB16C5 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D98420CC960D00EB16C5 /* HeroViewModel.swift */; };
+		6796D98720CC9EEE00EB16C5 /* HeroStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796D98620CC9EEE00EB16C5 /* HeroStats.swift */; };
 		8517F99A8D7C7055B97AE2DE /* Pods_D3Folio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */; };
 		8FCB6919CB31B06EDF9F2F76 /* Pods_D3Folio_Tests_D3FolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57268895A9966D30A4E4004D /* Pods_D3Folio_Tests_D3FolioTests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,8 @@
 		6796D97920CC54F900EB16C5 /* GetStartedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewControllerTests.swift; sourceTree = "<group>"; };
 		6796D97C20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTests.swift; sourceTree = "<group>"; };
 		6796D98220CC8D6700EB16C5 /* URLParameterEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoderTests.swift; sourceTree = "<group>"; };
+		6796D98420CC960D00EB16C5 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
+		6796D98620CC9EEE00EB16C5 /* HeroStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStats.swift; sourceTree = "<group>"; };
 		95175AC9F1266E73880E3FF0 /* Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-D3Folio-Tests-D3FolioTests/Pods-D3Folio-Tests-D3FolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C35A1EC45F3F147A43B4AD2C /* Pods_D3Folio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D3Folio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,12 +219,12 @@
 		671A889020C72D120055E379 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				671A889320C72D9E0055E379 /* ProfileApi.swift */,
 				671A88A420C86CAC0055E379 /* Models */,
 				6796D97720CC541300EB16C5 /* Storyboards */,
 				671A88AD20C8882F0055E379 /* ViewControllers */,
 				6796D97E20CC823F00EB16C5 /* ViewModels */,
 				671A889F20C865910055E379 /* Views */,
-				671A889320C72D9E0055E379 /* ProfileApi.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -241,6 +245,7 @@
 			children = (
 				671A88BF20C9DCCF0055E379 /* DefeatedEnemies.swift */,
 				671A889D20C861130055E379 /* Hero.swift */,
+				6796D98620CC9EEE00EB16C5 /* HeroStats.swift */,
 				671A889520C731DF0055E379 /* Profile.swift */,
 			);
 			path = Models;
@@ -315,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				671A889720C732BD0055E379 /* ProfileViewModel.swift */,
+				6796D98420CC960D00EB16C5 /* HeroViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -535,11 +541,13 @@
 				671A88BA20C9BB0B0055E379 /* BattleNetAuthorization.swift in Sources */,
 				671A884F20C72A1C0055E379 /* AppDelegate.swift in Sources */,
 				671A889820C732BD0055E379 /* ProfileViewModel.swift in Sources */,
+				6796D98520CC960D00EB16C5 /* HeroViewModel.swift in Sources */,
 				671A88CC20CB1BFB0055E379 /* EnemyCountView.swift in Sources */,
 				671A888020C72AAC0055E379 /* Service.swift in Sources */,
 				671A888620C72AAC0055E379 /* NetworkService.swift in Sources */,
 				671A889620C731DF0055E379 /* Profile.swift in Sources */,
 				671A888420C72AAC0055E379 /* NetworkError.swift in Sources */,
+				6796D98720CC9EEE00EB16C5 /* HeroStats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

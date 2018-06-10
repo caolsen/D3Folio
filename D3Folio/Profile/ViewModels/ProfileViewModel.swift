@@ -45,7 +45,10 @@ class ProfileViewModel {
   func getProfile(completion: @escaping(Error?) -> Void) {
     service.request(api) { [weak self] (data, response, error) in
       guard let data = data else {
-        completion(NetworkError.missingData)
+        DispatchQueue.main.async {
+          completion(NetworkError.missingData)
+        }
+
         print("data is nil")
         return
       }
@@ -58,7 +61,10 @@ class ProfileViewModel {
           completion(nil)
         }
       } catch {
-        completion(error)
+        DispatchQueue.main.async {
+          completion(error)
+        }
+
         print(error.localizedDescription)
       }
     }

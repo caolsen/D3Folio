@@ -113,7 +113,8 @@ class ProfileViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "ShowHero" {
       guard let dc = segue.destination as? HeroViewController else { return }
-      dc.battleTag = viewModel?.profile?.battleTag
+      dc.accountName = accountName
+      dc.tagId = tagId
       dc.hero = selectedHero
     }
   }

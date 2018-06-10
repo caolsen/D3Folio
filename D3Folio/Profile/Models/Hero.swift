@@ -55,7 +55,11 @@ struct Hero: Codable {
   let level: Int
 
   /// Character's paragon level. This will vary between normal, seasonal, and hardcore characters.
-  let paragonLevel: Int
+  let paragonLevel: Int?
+
+  /// Hero's stats, such as strength and vitality. This must be optional because it exists on
+  /// the Hero API request, but not in the hero data returned by the Profile request.
+  let stats: HeroStats?
 
   /// Returns the proper portrait for a hero. Portraits are static images
   /// determined by the combination of class and gender.
@@ -71,6 +75,7 @@ struct Hero: Codable {
     case gender
     case level
     case paragonLevel
+    case stats
   }
 
   /// Determines hero portrait image. I'm not a huge fan of long switches,
