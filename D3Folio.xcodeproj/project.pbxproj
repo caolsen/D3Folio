@@ -32,7 +32,7 @@
 		671A88A320C865B60055E379 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 671A88A220C865B60055E379 /* HeroTableViewCell.xib */; };
 		671A88A620C86ECF0055E379 /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */; };
 		671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88A920C870460055E379 /* ProfileServiceMock.swift */; };
-		671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AB20C871160055E379 /* ProfileEndpointMock.swift */; };
+		671A88AC20C871160055E379 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AB20C871160055E379 /* EndpointMock.swift */; };
 		671A88AF20C888560055E379 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A88AE20C888560055E379 /* HeroViewController.swift */; };
 		671A88B120C888860055E379 /* Hero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A88B020C888860055E379 /* Hero.storyboard */; };
 		671A88B620C9B9890055E379 /* GetStarted.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671A88B520C9B9890055E379 /* GetStarted.storyboard */; };
@@ -98,7 +98,7 @@
 		671A88A220C865B60055E379 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
 		671A88A520C86ECF0055E379 /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		671A88A920C870460055E379 /* ProfileServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceMock.swift; sourceTree = "<group>"; };
-		671A88AB20C871160055E379 /* ProfileEndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndpointMock.swift; sourceTree = "<group>"; };
+		671A88AB20C871160055E379 /* EndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointMock.swift; sourceTree = "<group>"; };
 		671A88AE20C888560055E379 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		671A88B020C888860055E379 /* Hero.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hero.storyboard; sourceTree = "<group>"; };
 		671A88B520C9B9890055E379 /* GetStarted.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStarted.storyboard; sourceTree = "<group>"; };
@@ -269,8 +269,8 @@
 		671A88A820C870390055E379 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				671A88AB20C871160055E379 /* EndpointMock.swift */,
 				671A88A920C870460055E379 /* ProfileServiceMock.swift */,
-				671A88AB20C871160055E379 /* ProfileEndpointMock.swift */,
 				6796D98820CCDAA300EB16C5 /* ProfileViewModelMock.swift */,
 			);
 			path = Mocks;
@@ -572,7 +572,7 @@
 			files = (
 				671A88A620C86ECF0055E379 /* ProfileViewModelTests.swift in Sources */,
 				6796D97D20CC7CFA00EB16C5 /* ProfileViewControllerTests.swift in Sources */,
-				671A88AC20C871160055E379 /* ProfileEndpointMock.swift in Sources */,
+				671A88AC20C871160055E379 /* EndpointMock.swift in Sources */,
 				671A88AA20C870460055E379 /* ProfileServiceMock.swift in Sources */,
 				6796D98920CCDAA300EB16C5 /* ProfileViewModelMock.swift in Sources */,
 				6796D98320CC8D6700EB16C5 /* URLParameterEncoderTests.swift in Sources */,

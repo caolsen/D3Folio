@@ -17,7 +17,7 @@ class ProfileViewModelTests: QuickSpec {
 
       it("can fetch and parse profile data") {
 
-        let viewModel = ProfileViewModel(service: ProfileServiceMock(.good), api: ProfileEndpointMock())
+        let viewModel = ProfileViewModel(service: ProfileServiceMock(.good), api: EndpointMock())
         viewModel.getProfile { (error) in
           expect(viewModel.profile).toNot(beNil())
         }
@@ -25,7 +25,7 @@ class ProfileViewModelTests: QuickSpec {
 
       it("will not parse empty data") {
         
-        let viewModel = ProfileViewModel(service: ProfileServiceMock(.empty), api: ProfileEndpointMock())
+        let viewModel = ProfileViewModel(service: ProfileServiceMock(.empty), api: EndpointMock())
         viewModel.getProfile { (error) in
           expect(error).to(beAnInstanceOf(NetworkError.self))
         }
@@ -33,7 +33,7 @@ class ProfileViewModelTests: QuickSpec {
 
       it("requires a battleTag in the response data") {
 
-        let viewModel = ProfileViewModel(service: ProfileServiceMock(.bad), api: ProfileEndpointMock())
+        let viewModel = ProfileViewModel(service: ProfileServiceMock(.bad), api: EndpointMock())
         viewModel.getProfile { (error) in
           expect(error).to(beAKindOf(NetworkError.self))
         }
@@ -41,7 +41,7 @@ class ProfileViewModelTests: QuickSpec {
 
       it("last updated should not be nil") {
 
-        let viewModel = ProfileViewModel(service: ProfileServiceMock(.date), api: ProfileEndpointMock())
+        let viewModel = ProfileViewModel(service: ProfileServiceMock(.date), api: EndpointMock())
         viewModel.getProfile { (error) in
           expect(viewModel.lastUpdated).toNot(beNil())
         }
@@ -51,7 +51,7 @@ class ProfileViewModelTests: QuickSpec {
 
         it("should contain contain 3 items") {
 
-          let viewModel = ProfileViewModel(service: ProfileServiceMock(.kills), api: ProfileEndpointMock())
+          let viewModel = ProfileViewModel(service: ProfileServiceMock(.kills), api: EndpointMock())
           viewModel.getProfile { (error) in
             expect(viewModel.defeatedEnemies.count).to(equal(2))
           }

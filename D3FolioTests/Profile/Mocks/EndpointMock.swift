@@ -9,7 +9,7 @@
 import Foundation
 @testable import D3Folio
 
-struct ProfileEndpointMock: Endpoint {
+struct EndpointMock: Endpoint {
 
   var baseURL: URL {
     guard let url = URL(string: "https://google.com") else { fatalError("baseURL could not be configured.")}
