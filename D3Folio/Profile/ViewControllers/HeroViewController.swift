@@ -36,7 +36,11 @@ class HeroViewController: UIViewController {
 
   /// viewModel for populating all the UI elements. Gets created via the ProfileApi.
   /// Will be nil if accountName or tagId are nil.
-  var viewModel: HeroViewModel?
+  var viewModel: HeroViewModel? {
+    didSet {
+      getData()
+    }
+  }
 
   // MARK: iOS Lifecycle
 
@@ -51,7 +55,6 @@ class HeroViewController: UIViewController {
 
     setupInitialViews()
     setupViewModel()
-    getData()
   }
 
   // MARK: Instance Functions
@@ -81,7 +84,9 @@ class HeroViewController: UIViewController {
   /// - Updates other UI elements upon completion
   private func getData() {
     viewModel?.getHero { (error) in
-      // TODO: handle error
+      if let error = error {
+        self.showAlert(withTitle: "Error", message: error.localizedDescription)
+      }
 
       self.updateStatsView()
     }

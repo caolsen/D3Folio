@@ -44,7 +44,11 @@ class ProfileViewController: UIViewController {
 
   /// viewModel for populating all the UI elements. Gets created via the ProfileApi.
   /// Will be nil if accountName or tagId are nil.
-  var viewModel: ProfileViewModel?
+  var viewModel: ProfileViewModel? {
+    didSet {
+      getData()
+    }
+  }
 
   // MARK: iOS Lifecycle
 
@@ -53,7 +57,6 @@ class ProfileViewController: UIViewController {
 
     registerTableViewCells()
     setupViewModel()
-    getData()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -65,8 +68,12 @@ class ProfileViewController: UIViewController {
 
   /// Creates the viewModel using the ProfileApi. Will fail if accountName or tagId are nil.
   private func setupViewModel() {
+    
     guard let accountName = accountName, let tagId = tagId else {
-      // TODO: pop error
+      showAlert(withTitle: "Error", message: "Missing account name.") { (_) in
+        self.navigationController?.popViewController(animated: true)
+      }
+
       return
     }
 
@@ -79,7 +86,11 @@ class ProfileViewController: UIViewController {
   /// - Reloads tableView and updates other UI elements upon completion
   private func getData() {
     viewModel?.getProfile { (error) in
-      // TODO: handle error
+      if let error = error {
+        self.showAlert(withTitle: "Error", message: error.localizedDescription) { (_) in
+          self.navigationController?.popViewController(animated: true)
+        }
+      }
 
       self.activityIndicator.stopAnimating()
       self.tableView.reloadData()
