@@ -1,0 +1,6 @@
+framework module Pods_D3FolioTests {
+  umbrella header "Pods-D3FolioTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
