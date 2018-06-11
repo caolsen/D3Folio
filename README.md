@@ -5,7 +5,11 @@ Implements a small subset of routes from Profile API: https://dev.battle.net/io-
 
 ## Installation and Use
 
+Cocoapods is needed.
+
 Clone the master branch and run.
+
+A ```pod install``` is necessary to run the tests.
 
 The app is fairly simple to use. Simply enter a battletag into the fields provided to view data for the given battletag's Diablo 3 profile. A battletag is comprised of two parts, an alphanumeric name followed by a '#' and a numeric id. e.g. Player#1234.
 
