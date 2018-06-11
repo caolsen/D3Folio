@@ -12,6 +12,12 @@ class Service: NetworkService {
     
     private var task: URLSessionTask?
     
+    /// Send a network request using URLSession's shared session. The request is
+    /// built from an Endpoint object.
+    ///
+    /// - Parameters:
+    ///   - endpoint: object containing configuration for the request
+    ///   - completion: called on success or failure
     func request(_ endpoint: Endpoint, completion: @escaping NetworkServiceCompletion) {
         
         let session = URLSession.shared
@@ -27,13 +33,14 @@ class Service: NetworkService {
         task?.resume()
     }
     
+    /// Cancels the active session task. e.g. to end long running tasks
     func cancel() {
         task?.cancel()
     }
     
     private func buildRequest(from endpoint: Endpoint) throws -> URLRequest {
         var request = URLRequest(url: endpoint.baseURL.appendingPathComponent(endpoint.path),
-                                 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                 cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0)
         request.httpMethod = endpoint.method.rawValue
         
