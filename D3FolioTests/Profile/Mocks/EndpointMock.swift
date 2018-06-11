@@ -12,6 +12,8 @@ import Foundation
 struct EndpointMock: Endpoint {
 
   var baseURL: URL {
+
+    /// Just need a dummy URL that will parse for this.
     guard let url = URL(string: "https://google.com") else { fatalError("baseURL could not be configured.")}
     return url
   }

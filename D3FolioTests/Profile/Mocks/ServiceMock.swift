@@ -9,20 +9,12 @@
 import Foundation
 @testable import D3Folio
 
-enum RequestDataType {
-  case good
-  case bad
-  case empty
-  case kills
-  case date
-}
-
-class ProfileServiceMock: NetworkService {
+class ServiceMock: NetworkService {
 
   let data: Data?
 
-  init(_ requestDataType: RequestDataType) {
-    switch requestDataType {
+  init(profileDataType: ProfileServiceDataType) {
+    switch profileDataType {
     case .good:
       data = ("{\"battleTag\":\"player\"}").data(using: .utf8)
     case .bad:
@@ -33,6 +25,17 @@ class ProfileServiceMock: NetworkService {
       data = ("{\"battleTag\":\"player\",\"kills\":{\"monsters\":1,\"elites\":1,\"hardcoreMonsters\":1}}").data(using: .utf8)
     case .date:
       data = ("{\"battleTag\":\"player\",\"lastUpdated\":1516721909}").data(using: .utf8)
+    }
+  }
+
+  init(heroDataType: HeroServiceDataType) {
+    switch heroDataType {
+    case .good:
+      data = ("{\"id\":1,\"name\":\"player\",\"class\":\"wizard\",\"gender\":1,\"level\":1}").data(using: .utf8)
+    case .bad:
+      data = ("{\"junkData\":\"junk\"}").data(using: .utf8)
+    case .empty:
+      data = nil
     }
   }
 
