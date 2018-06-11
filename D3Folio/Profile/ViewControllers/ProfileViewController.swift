@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController {
 
   /// viewModel for populating all the UI elements. Gets created via the ProfileApi.
   /// Will be nil if accountName or tagId are nil.
-  var viewModel: ProfileViewModel? {
+  var viewModel: ProfileModel? {
     didSet {
       getData()
     }
@@ -103,6 +103,7 @@ class ProfileViewController: UIViewController {
   private func setupEnemyCountStackView() {
     guard let defeatedEnemies = viewModel?.defeatedEnemies else { return }
 
+    // create one view for each type of defeated enemy
     for monsters in defeatedEnemies {
 
       let nib = UINib(nibName: "EnemyCountView", bundle: nil)

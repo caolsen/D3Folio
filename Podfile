@@ -4,8 +4,8 @@ use_frameworks!
 target "D3Folio" do
   # Normal libraries
 
-  abstract_target 'Tests' do
-    target "D3FolioTests"
+  target "D3FolioTests" do
+    inherit! :search_paths
 
     pod 'Quick'
     pod 'Nimble'

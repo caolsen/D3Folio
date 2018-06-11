@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Adds query parameters to a URL.
 class URLParameterEncoder: ParameterEncoder {
     
     static func encode(request: inout URLRequest, with parameters: Parameters) throws {
@@ -15,7 +16,9 @@ class URLParameterEncoder: ParameterEncoder {
         
         if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false), !parameters.isEmpty {
             urlComponents.queryItems = [URLQueryItem]()
-            
+
+            // check that parameters contain only characters allowed in URLs
+            // add to urlComponents
             parameters.forEach {
                 let value = "\($0.value)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
                 let queryItem = URLQueryItem(name: $0.key, value: value)

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Decode data into an object of Type T that conforms to Decodable.
 class JSONParser: Parser {
     
     static func parse<T: Decodable>(data: Data) throws -> T {

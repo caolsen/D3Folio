@@ -36,7 +36,7 @@ class HeroViewController: UIViewController {
 
   /// viewModel for populating all the UI elements. Gets created via the ProfileApi.
   /// Will be nil if accountName or tagId are nil.
-  var viewModel: HeroViewModel? {
+  var viewModel: HeroModel? {
     didSet {
       getData()
     }
@@ -66,6 +66,9 @@ class HeroViewController: UIViewController {
 
     if let paragonLevel = hero.paragonLevel {
       paragonLevelLabel.text = "Paragon " + String(paragonLevel)
+    } else {
+      // if no paragon level, hide label
+      paragonLevelLabel.isHidden = true
     }
   }
 
@@ -92,10 +95,10 @@ class HeroViewController: UIViewController {
     }
   }
 
+  /// Update all the stats labels and animate alpha change to show the view.
   private func updateStatsView() {
     guard let stats = viewModel?.hero?.stats else { return }
 
-    // TODO: converting these to strings should probably happen in the viewModel
     strengthLabel.text = String(stats.strength)
     dexterityLabel.text = String(stats.dexterity)
     vitalityLabel.text = String(stats.vitality)

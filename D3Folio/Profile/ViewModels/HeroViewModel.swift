@@ -8,7 +8,15 @@
 
 import Foundation
 
-class HeroViewModel {
+/// Protocol to allow creating of mocks for unit tests
+protocol HeroModel {
+  
+  var hero: Hero? { get set }
+
+  func getHero(completion: @escaping(Error?) -> Void)
+}
+
+class HeroViewModel: HeroModel {
 
   // MARK: Private Properties
 

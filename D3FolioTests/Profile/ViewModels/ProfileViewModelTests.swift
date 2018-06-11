@@ -49,11 +49,11 @@ class ProfileViewModelTests: QuickSpec {
 
       context("defeated enemies") {
 
-        it("should contain contain 3 items") {
+        it("should contain 3 items") {
 
           let viewModel = ProfileViewModel(service: ProfileServiceMock(.kills), api: EndpointMock())
           viewModel.getProfile { (error) in
-            expect(viewModel.defeatedEnemies.count).to(equal(2))
+            expect(viewModel.defeatedEnemies.count).to(equal(3))
           }
         }
       }

@@ -18,19 +18,22 @@ class ProfileViewControllerTests: QuickSpec {
 
     beforeEach {
       profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController() as! ProfileViewController
+
+      UIApplication.shared.keyWindow!.rootViewController = profileViewController
+      let _ = profileViewController.view
     }
 
     afterEach {
       profileViewController = nil
     }
 
-    describe("viewDidLoad:") {
+    describe("enemy count stack view") {
 
-      beforeEach {
-        let _ = profileViewController.view
+      it("should contain a number of views equal to viewModel.defeatedEnemies.count") {
+
+        profileViewController.viewModel = ProfileViewModelMock()
+        expect(profileViewController.enemyCountStackView.arrangedSubviews.count).to(equal(profileViewController.viewModel?.defeatedEnemies.count))
       }
-
-      
     }
   }
 }

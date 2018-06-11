@@ -8,7 +8,17 @@
 
 import Foundation
 
-class ProfileViewModel {
+/// Protocol to allow creating of mocks for unit tests
+protocol ProfileModel {
+  
+  var profile: Profile? { get set }
+  var lastUpdated: String? { get }
+  var defeatedEnemies: [(count: String, title: String)] { get set }
+
+  func getProfile(completion: @escaping(Error?) -> Void)
+}
+
+class ProfileViewModel: ProfileModel {
 
   // MARK: Private Properties
 
@@ -43,7 +53,7 @@ class ProfileViewModel {
   // MARK: Instance Functions
 
   func getProfile(completion: @escaping(Error?) -> Void) {
-    service.request(api) { [weak self] (data, response, error) in
+    service.request(api) { (data, response, error) in
       guard let data = data else {
         DispatchQueue.main.async {
           completion(NetworkError.missingData)
@@ -55,8 +65,8 @@ class ProfileViewModel {
 
       do {
         let profile: Profile = try JSONParser.parse(data: data)
-        self?.profile = profile
-        self?.generateDefeatedEnemyList()
+        self.profile = profile
+        self.generateDefeatedEnemyList()
         DispatchQueue.main.async {
           completion(nil)
         }
@@ -72,6 +82,10 @@ class ProfileViewModel {
 
   // MARK: Private Functions
 
+  /// Format a T imeInterval as a string for US time.
+  ///
+  /// - Parameter interval: time interval (epoch time)
+  /// - Returns: date formatted as "MMM dd yyyy hh:mm:ss"
   private func formatDate(from interval: TimeInterval) -> String {
     let date = Date(timeIntervalSince1970: interval)
     let dateFormatter = DateFormatter()
@@ -81,6 +95,7 @@ class ProfileViewModel {
     return dateFormatter.string(from: date)
   }
 
+  /// For each existing tyoe of enemy generate and append a tuple to the defeatedEnemy list.
   private func generateDefeatedEnemyList() {
     if let monsters = profile?.kills?.monsters {
       defeatedEnemies.append((String(monsters), "monsters"))
