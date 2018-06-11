@@ -104,7 +104,7 @@ class HeroViewController: UIViewController {
     vitalityLabel.text = String(stats.vitality)
     intelligenceLabel.text = String(stats.intelligence)
 
-    UIView.animate(withDuration: 1.0) {
+    UIView.animate(withDuration: 0.5) {
       self.attributesStackView.alpha = 1.0
     }
   }
