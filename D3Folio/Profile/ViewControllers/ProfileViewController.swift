@@ -71,7 +71,9 @@ class ProfileViewController: UIViewController {
     
     guard let accountName = accountName, let tagId = tagId else {
       showAlert(withTitle: "Error", message: "Missing account name.") { (_) in
-        self.navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+          self.navigationController?.popViewController(animated: true)
+        }
       }
 
       return
@@ -88,7 +90,9 @@ class ProfileViewController: UIViewController {
     viewModel?.getProfile { (error) in
       if let error = error {
         self.showAlert(withTitle: "Error", message: error.localizedDescription) { (_) in
-          self.navigationController?.popViewController(animated: true)
+          DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+          }
         }
       }
 

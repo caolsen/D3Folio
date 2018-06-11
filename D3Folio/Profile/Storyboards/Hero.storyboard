@@ -132,15 +132,20 @@
                                                 </subviews>
                                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                                             </stackView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1YL-0g-2pT">
+                                                <rect key="frame" x="177" y="279.5" width="20" height="20"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="w8c-Y4-hSy" firstAttribute="top" secondItem="TnO-Xs-Bxm" secondAttribute="top" constant="24" id="3gu-ug-dcS"/>
                                             <constraint firstItem="w8c-Y4-hSy" firstAttribute="centerX" secondItem="TnO-Xs-Bxm" secondAttribute="centerX" id="JrM-hw-MrQ"/>
+                                            <constraint firstItem="1YL-0g-2pT" firstAttribute="top" secondItem="eIU-Xo-sgL" secondAttribute="bottom" constant="44" id="abK-7n-Zhl"/>
                                             <constraint firstItem="TbD-G3-PTF" firstAttribute="top" secondItem="w8c-Y4-hSy" secondAttribute="bottom" constant="8" id="bLd-A7-jpU"/>
                                             <constraint firstItem="eIU-Xo-sgL" firstAttribute="centerX" secondItem="TnO-Xs-Bxm" secondAttribute="centerX" id="cTE-7s-O7Z"/>
                                             <constraint firstAttribute="bottom" secondItem="i96-Gq-B65" secondAttribute="bottom" constant="32" id="jue-gS-iaX"/>
                                             <constraint firstItem="MkA-st-38u" firstAttribute="centerX" secondItem="TnO-Xs-Bxm" secondAttribute="centerX" id="n1A-7v-41H"/>
+                                            <constraint firstItem="1YL-0g-2pT" firstAttribute="centerX" secondItem="TnO-Xs-Bxm" secondAttribute="centerX" id="ng3-go-dil"/>
                                             <constraint firstItem="MkA-st-38u" firstAttribute="top" secondItem="TbD-G3-PTF" secondAttribute="bottom" constant="8" id="oTb-5I-WCo"/>
                                             <constraint firstItem="i96-Gq-B65" firstAttribute="leading" secondItem="TnO-Xs-Bxm" secondAttribute="leading" constant="50" id="ph0-eY-hE0"/>
                                             <constraint firstAttribute="trailing" secondItem="i96-Gq-B65" secondAttribute="trailing" constant="50" id="ssC-mJ-c6C"/>
@@ -176,6 +181,7 @@
                         <outlet property="nameLabel" destination="TbD-G3-PTF" id="Ij2-tI-EGC"/>
                         <outlet property="paragonLevelLabel" destination="eIU-Xo-sgL" id="66f-r3-kKT"/>
                         <outlet property="portraitImageView" destination="w8c-Y4-hSy" id="0an-hm-gEh"/>
+                        <outlet property="statsActivityIndicator" destination="1YL-0g-2pT" id="dAo-jI-sno"/>
                         <outlet property="strengthLabel" destination="A7f-kg-dNZ" id="azW-wF-UYc"/>
                         <outlet property="vitalityLabel" destination="MIe-PL-YVw" id="OUm-VF-bgb"/>
                     </connections>

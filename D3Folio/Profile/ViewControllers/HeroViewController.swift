@@ -23,6 +23,7 @@ class HeroViewController: UIViewController {
   @IBOutlet weak var vitalityLabel: UILabel!
   @IBOutlet weak var intelligenceLabel: UILabel!
   
+  @IBOutlet weak var statsActivityIndicator: UIActivityIndicatorView!
   // MARK: Instance Properties
 
   /// alphanumeric portion of a battletag. Passed from ProfileViewController
@@ -87,6 +88,8 @@ class HeroViewController: UIViewController {
   /// - Updates other UI elements upon completion
   private func getData() {
     viewModel?.getHero { (error) in
+      self.statsActivityIndicator.stopAnimating()
+
       if let error = error {
         self.showAlert(withTitle: "Error", message: error.localizedDescription)
       }
@@ -104,7 +107,7 @@ class HeroViewController: UIViewController {
     vitalityLabel.text = String(stats.vitality)
     intelligenceLabel.text = String(stats.intelligence)
 
-    UIView.animate(withDuration: 1.0) {
+    UIView.animate(withDuration: 0.5) {
       self.attributesStackView.alpha = 1.0
     }
   }

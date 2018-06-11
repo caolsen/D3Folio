@@ -32,7 +32,7 @@ class GetStartedViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: false)
+    navigationController?.setNavigationBarHidden(true, animated: true)
 
     // clear text fields to make it easier to enter subsequent queries
     accountNameTextField.text = ""

@@ -83,9 +83,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Nc4-8n-DAp" firstAttribute="leading" secondItem="6rz-1P-UlH" secondAttribute="leading" id="7l6-XO-oBr"/>
+                            <constraint firstItem="Nc4-8n-DAp" firstAttribute="leading" secondItem="6rz-1P-UlH" secondAttribute="leading" id="7l6-XO-oBr">
+                                <variation key="widthClass=regular" constant="44"/>
+                            </constraint>
                             <constraint firstItem="Nc4-8n-DAp" firstAttribute="centerY" secondItem="uRK-lA-o7o" secondAttribute="centerY" id="LDa-Ze-Tm2"/>
-                            <constraint firstItem="6rz-1P-UlH" firstAttribute="trailing" secondItem="Nc4-8n-DAp" secondAttribute="trailing" id="Q0g-Yr-EQd"/>
+                            <constraint firstItem="6rz-1P-UlH" firstAttribute="trailing" secondItem="Nc4-8n-DAp" secondAttribute="trailing" id="Q0g-Yr-EQd">
+                                <variation key="widthClass=regular" constant="44"/>
+                            </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6rz-1P-UlH"/>
                     </view>
